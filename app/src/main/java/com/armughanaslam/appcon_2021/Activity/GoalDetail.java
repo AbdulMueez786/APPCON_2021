@@ -75,6 +75,9 @@ public class GoalDetail extends AppCompatActivity implements PopupMenu.OnMenuIte
     boolean state_flag=true;
     String creater_id;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
