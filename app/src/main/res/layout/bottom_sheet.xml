@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottom_sheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="40dp"
+    android:elevation="10dp"
+    app:behavior_halfExpandedRatio="0.2"
+    android:background="@drawable/bottomsheet_bgr"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_drag_handle_24"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:text="How much do you want to donate?"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:weightSum="3"
+            >
+            <TextView
+                android:id="@+id/hundred"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#EFEFEF"
+                android:layout_marginBottom="10dp"
+                android:text="Rs 100"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+            <TextView
+                android:id="@+id/five_hundred"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#EFEFEF"
+                android:layout_marginBottom="10dp"
+                android:text="Rs 500"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+            <TextView
+                android:id="@+id/thousand"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#EFEFEF"
+                android:text="Rs 1000"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/custom_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:hint="Enter amount manually"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <Switch
+                android:id="@+id/anonymous"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stay Anonymous"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/donate_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="Donate"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:backgroundTint="#219FA7"/>
+
+    </LinearLayout>
+
+</LinearLayout>

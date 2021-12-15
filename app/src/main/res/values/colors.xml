@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#553A3737</color>
+    <color name="purple_500">#219FA7</color>
+    <color name="purple_700">#1194AA</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="home">#219FA7</color>
+    <color name="like">#C9379D</color>
+    <color name="notification">#AE7E0F</color>
+    <color name="profile">#583787</color>
+
+    <color name="grayLight">#FAFAFA</color>
+    <color name="starblue">#219FA7</color>
+    <color name="endblue">#0bcce6</color>
+
+    <color name="home_20">#331194AA</color>
+    <color name="like_20">#33C9379D</color>
+    <color name="notification_20">#33AE7E0F</color>
+    <color name="profile_20">#33583787</color>
+
+    <color name="toggle_hover">@color/gray</color>
+    <color name="toggle_normal">@color/gainsboro</color>
+    <color name="toggle_active">@color/silver</color>
+    <color name="toggle_normal_off">@color/darkgray</color>
+
+    <color name="gainsboro">#DCdCdC</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="darkgray">#a9a9a9</color>
+    <color name="gray">#808080</color>
+</resources>

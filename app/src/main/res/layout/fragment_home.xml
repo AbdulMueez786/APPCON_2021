@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginTop="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:id="@+id/ll1_detail"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="90dp"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <ImageButton
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_rectangle_with_border"
+            android:padding="20dp"
+            android:src="@drawable/logout"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:layout_weight="5"
+            android:textColor="#424141"
+            android:clickable="true"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/top_donors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_rectangle_with_border"
+            android:padding="20dp"
+            android:src="@drawable/top_funders_not_selected"
+            android:textAllCaps="false"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+<RelativeLayout
+    android:id="@+id/search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/ll1_detail"
+    >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/list_search"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:textSize="14dp"
+        android:hint="Search Funds Goals"
+        android:textColor="#434343"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/searchbox"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/ll1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_rectangle"
+    android:backgroundTint="#219FA7"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp"
+    android:weightSum="3"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/search">
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:text="Start new Fundraising"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <Button
+        android:id="@+id/start_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:text="Start New"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll2"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/ll1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/medical_funds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rectangle"
+            android:backgroundTint="#F1F1F1"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/healthcare"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:tint="#139BDA" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Medical"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/education_funds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_rectangle"
+            android:backgroundTint="#F1F1F1"
+            android:padding="15dp"
+            android:src="@drawable/education"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:tint="#EA873C" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Education"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/disaster_funds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_rectangle"
+            android:backgroundTint="#F1F1F1"
+            android:padding="15dp"
+            android:src="@drawable/hazard"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:tint="#F1326E" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Disaster"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/other_funds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_rectangle"
+            android:backgroundTint="#F1F1F1"
+            android:padding="15dp"
+            android:src="@drawable/others"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:tint="#219FA7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Others"
+            android:layout_gravity="center"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+<TextView
+    android:id="@+id/label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:textStyle="bold"
+    android:text="Active Goals"
+
+    android:textSize="20sp"
+    android:layout_marginLeft="30dp"
+    android:paddingStart="30dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/ll2"
+    android:paddingTop="10dp"
+
+    />
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label"
+        android:id="@+id/recyclerviewGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        tools:ignore="MissingConstraints">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

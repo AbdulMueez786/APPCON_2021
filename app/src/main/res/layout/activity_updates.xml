@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chatbackground1">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#FFF">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Cheers for Peers"
+            app:titleTextColor="#FFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="18dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/user" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="13dp"
+                        android:text="Username" />
+
+                    <TextView
+                        android:id="@+id/individual_profile_lastseen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#065580"
+                        android:fontFamily="serif"
+                        android:textSize="11dp"
+                        android:text="last seen today at 9:00am" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/report"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/report_icon"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="18dp" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#A3A2A2" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ln_action" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/ln_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:elevation="2dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/btn_send_task"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:tint="#535252"
+                    android:src="@drawable/ic_baseline_add_task_24"
+                    android:layout_gravity="center_vertical" />
+
+                <EditText
+                    android:textColor="@color/black"
+                    android:id="@+id/text_send"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:background="#FFF"
+                    android:hint="Type a message" />
+
+                <ImageView
+                    android:id="@+id/attach_pic"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/camera"
+                    app:tint="#535252"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#42A4C3"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_baseline_send_24" />
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">APPCON_2021</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="group1">My Goals</string>
+    <string name="group2">Participated Goals</string>
+    <string name="select">Select Category</string>
+    <string-array name="group1">
+        <item>Education Project</item>
+        <item>Electricity supply</item>
+        <item>Covid relief camps</item>
+    </string-array>
+
+    <string-array name="group2">
+        <item>Water conservation</item>
+        <item>Earthquake Relief</item>
+        <item>Environment Hazard</item>
+    </string-array>
+</resources>
